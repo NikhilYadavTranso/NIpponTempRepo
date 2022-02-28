@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/itemRequestCardView"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/cardview_light_background"
+android:elevation="8dp"
     android:layout_height="wrap_content">
 
     <TextView
+        android:layout_margin="8dp"
         android:id="@+id/requestName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Request"
+        android:textSize="20sp"
         />
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

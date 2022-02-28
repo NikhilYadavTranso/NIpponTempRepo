@@ -100,6 +100,16 @@
     <fragment
         android:id="@+id/routeControllerFragment"
         android:name="com.example.nippon.view.home.routecountroler.RouteControllerFragment"
-        android:label="RouteControllerFragment" />
+        android:label="RouteControllerFragment" >
+        <action
+            android:id="@+id/action_routeControllerFragment_to_assignVehicleFragment"
+            app:destination="@id/assignVehicleFragment" >
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/assignVehicleFragment"
+        android:name="com.example.nippon.view.home.routecountroler.AssignVehicleFragment"
+        android:label="AssignVehicleFragment" />
 
 </navigation>
