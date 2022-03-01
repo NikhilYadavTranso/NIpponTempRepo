@@ -7,18 +7,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.Navigation
 import com.example.nippon.R
 import com.example.nippon.databinding.BranchFragmentBinding
 import com.example.nippon.databinding.HomeFragmentBinding
 import com.example.nippon.view.home.HomeDirections
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class BranchFragment : Fragment() {
 
     private lateinit var branchFragmentbinding: BranchFragmentBinding
     private lateinit var viewModel: BranchViewModel
 
+    val animalsArray = arrayOf(
+        "FLT",
+        "LIT",
+        "RT"
+    )
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,25 +43,35 @@ class BranchFragment : Fragment() {
 //            Toast.makeText(activity, "Feature under development", Toast.LENGTH_SHORT).show()
 //        }
 
-        branchFragmentbinding.branchFragmentTabLayout.addOnTabSelectedListener(object :
-            TabLayout.OnTabSelectedListener {
+        val adapter = BranchViewPagerAdapter(childFragmentManager, lifecycle)
+        branchFragmentbinding.viewPagerBranch.adapter = adapter
 
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                val action = BranchFragmentDirections.actionBranchFragmentToFltFragment()
-                Navigation.findNavController(branchFragmentbinding.branchFrameLayout).navigate(action)
-                // Handle tab select
-            }
 
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                // Handle tab reselect
-            }
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                // Handle tab unselect
-            }
-        })
+        TabLayoutMediator(branchFragmentbinding.branchFragmentTabLayout,branchFragmentbinding.viewPagerBranch){ tab,position ->
+            tab.text = animalsArray[position]
+
+        }.attach()
+//        branchFragmentbinding.branchFragmentTabLayout.addOnTabSelectedListener(object :
+//            TabLayout.OnTabSelectedListener {
+//
+//            override fun onTabSelected(tab: TabLayout.Tab?) {
+//                val action = BranchFragmentDirections.actionBranchFragmentToFltFragment()
+//                Navigation.findNavController(branchFragmentbinding.viewPagerBranch).navigate(action)
+//                // Handle tab select
+//            }
+//
+//            override fun onTabReselected(tab: TabLayout.Tab?) {
+//                // Handle tab reselect
+//            }
+//
+//            override fun onTabUnselected(tab: TabLayout.Tab?) {
+//                // Handle tab unselect
+//            }
+//        })
         return branchFragmentbinding.root
     }
+
 
 
 }

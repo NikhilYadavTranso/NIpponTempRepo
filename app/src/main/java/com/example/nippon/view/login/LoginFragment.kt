@@ -56,6 +56,7 @@ class LoginFragment : BaseFragment() {
                 model.isUserType.value.equals("CH") -> {
                     Toast.makeText(activity, "Login as BRANCH user", Toast.LENGTH_SHORT).show()
                     val action = LoginFragmentDirections.actionLoginFragmentToHome()
+
                     Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
                 }
                 model.isUserType.value.equals("RC") -> {
