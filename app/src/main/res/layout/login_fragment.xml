@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -12,17 +11,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.login.LoginFragment"
-        android:background="@color/backgroundPrimary">
+        android:background="@color/backgroundPrimary"
+        tools:context=".view.login.LoginFragment">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/login_layout"
-            android.support.design:cardCornerRadius="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/maxmargin"
             android:background="@color/white"
             android:elevation="8dp"
+            android.support.design:cardCornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="MissingConstraints">
@@ -33,17 +32,54 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="@dimen/maxPadding">
+
                 <TextView
                     android:id="@+id/login_heading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:gravity="start"
+                    android:text="Login here"
+                    android:textColor="@color/black"
                     android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:text="Login with"
-                    android:textColor="@color/black" />
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Branch:"
+                    android:layout_marginBottom="2dp"/>
 
+                <Spinner
+                    android:id="@+id/branchSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+
+                    android:padding="8dp"
+                    android:backgroundTint="@color/iconGreen"
+
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:text="Branch" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Sub Branch:"
+                    android:layout_marginBottom="2dp"/>
+                <Spinner
+                    android:id="@+id/subbranchSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:textSize="14sp"
+
+                    android:layout_height="wrap_content"
+                    android:text="Sub Branch" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/LoginTextInputOuterFieldStyle"
@@ -54,7 +90,7 @@
                         style="@style/LoginTextInputInnerFieldStyle"
                         android:drawableStart="@drawable/username_icon"
                         android:drawablePadding="8dp"
-                        android:hint="Username"
+                        android:hint="User Id"
                         android:padding="16dp"
                         android:textSize="14sp" />
 
@@ -86,6 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:gravity="end"
+                    android:visibility="gone"
                     android:text="@string/create_account_heading"
                     android:textColor="@color/black" />
 

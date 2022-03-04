@@ -25,12 +25,14 @@ class RouteControllerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        val userType = arguments?.get("userType").toString()
         val listener = object: RequestListAdapter.CustomViewHolderListener {
             override fun onCustomItemClicked(request: Requests) {
 
                 val passingRequests = SerialData(request)
-                val action = RouteControllerFragmentDirections.actionRouteControllerFragmentToAssignVehicleFragment(passingRequests)
+                val action = RouteControllerFragmentDirections.actionRouteControllerFragmentToAssignVehicleFragment(request,
+                    userType
+                )
                 Navigation.findNavController(routeControllerFragmentbinding.routeRecycler).navigate(action)
 
             }

@@ -1,5 +1,6 @@
 package com.example.nippon.view.login
 
+import android.R
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
@@ -11,13 +12,12 @@ import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.nippon.base.BaseFragment
 import com.example.nippon.databinding.LoginFragmentBinding
+
 
 class LoginFragment : BaseFragment() {
     private lateinit var loginFragmentBinding: LoginFragmentBinding
@@ -31,6 +31,7 @@ class LoginFragment : BaseFragment() {
         mSetCreateAccountText()
         mSetTermsAndConditionAndPrivacyPolicy()
         observeViewModel()
+        mSpinnerSet()
         //Login Button clicked
         loginFragmentBinding.loginBtn.setOnClickListener {
             val enteredEmail = loginFragmentBinding.email.text.toString()
@@ -42,12 +43,73 @@ class LoginFragment : BaseFragment() {
                 loginFragmentBinding.password.text?.isNotEmpty().apply {
 
                     //login in user
-                    model.loginUser(loginFragmentBinding.email.text.toString(),loginFragmentBinding.password.text.toString())
+                    model.loginUser(
+                        loginFragmentBinding.email.text.toString(),
+                        loginFragmentBinding.password.text.toString()
+                    )
                 }
             }
         }
 
         return loginFragmentBinding.root
+    }
+
+    private fun mSpinnerSet() {
+
+
+        val branch: MutableList<String> = ArrayList()
+
+        branch.add("AHMEDABAD")
+        branch.add("BENGALURU")
+        branch.add("CHENNAI")
+        branch.add("COCHIN")
+        branch.add("COIMBATORE")
+        branch.add("HYDERABAD")
+        branch.add("MUMBAI")
+        branch.add("PUNE")
+        branch.add("VISHAKHAPATNAM")
+        // access the spinner
+        val subbranch: MutableList<String> = ArrayList()
+
+        subbranch.add("Lipsom")
+        subbranch.add("Lipsom")
+        subbranch.add("Lipsom")
+        subbranch.add("Lipsom")
+        subbranch.add("Lipsom")
+        subbranch.add("Lipsom")
+        subbranch.add("Lipsom")
+        subbranch.add("Lipsom")
+        subbranch.add("Lipsom")
+//        if (loginFragmentBinding.branchSpinner != null) {
+        val adapterBranch = ArrayAdapter(
+            loginFragmentBinding.root.context,
+            android.R.layout.simple_spinner_item, branch
+        )
+        loginFragmentBinding.branchSpinner.adapter = adapterBranch
+        val adapterSubBranch = ArrayAdapter(
+            loginFragmentBinding.root.context,
+            android.R.layout.simple_spinner_item, subbranch
+        )
+        loginFragmentBinding.subbranchSpinner.adapter = adapterSubBranch
+
+        loginFragmentBinding.branchSpinner.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View, position: Int, id: Long
+            ) {
+                Toast.makeText(
+                    loginFragmentBinding.root.context,
+                    branch[position],
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // write code to perform some action
+            }
+        }
+//        }
     }
 
     private fun observeViewModel() {
@@ -60,7 +122,8 @@ class LoginFragment : BaseFragment() {
                     Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
                 }
                 model.isUserType.value.equals("RC") -> {
-                    Toast.makeText(activity, "Login as Route controller user", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, "Login as Route controller user", Toast.LENGTH_SHORT)
+                        .show()
                     val action = LoginFragmentDirections.actionLoginFragmentToHome()
                     Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
                 }
@@ -70,7 +133,11 @@ class LoginFragment : BaseFragment() {
                     Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
                 }
                 else -> {
-                    Toast.makeText(activity, "Unable to LoginIn. Please try again after some time", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        activity,
+                        "Unable to LoginIn. Please try again after some time",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
 
@@ -114,7 +181,8 @@ class LoginFragment : BaseFragment() {
 
         val termsAndConditionClickableSpan = object : ClickableSpan() {
             override fun onClick(view: View) {
-                Navigation.findNavController(loginFragmentBinding.termsConditionPrivacyPolicyLoginTv).navigate(LoginFragmentDirections.actionLoginFragmentToTermsAndConditionsFragmnet())
+                Navigation.findNavController(loginFragmentBinding.termsConditionPrivacyPolicyLoginTv)
+                    .navigate(LoginFragmentDirections.actionLoginFragmentToTermsAndConditionsFragmnet())
             }
         }
 
@@ -133,7 +201,8 @@ class LoginFragment : BaseFragment() {
 
         val privacyPolicyClickableSpan = object : ClickableSpan() {
             override fun onClick(view: View) {
-                Navigation.findNavController(loginFragmentBinding.termsConditionPrivacyPolicyLoginTv).navigate(LoginFragmentDirections.actionLoginFragmentToPrivacyPolicyFragment())
+                Navigation.findNavController(loginFragmentBinding.termsConditionPrivacyPolicyLoginTv)
+                    .navigate(LoginFragmentDirections.actionLoginFragmentToPrivacyPolicyFragment())
             }
         }
 
