@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     >
+
     <data>
 
     </data>
@@ -11,48 +12,211 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.home.branch.flt.FltFragment"
-        android:background="@color/backgroundPrimary">
+        android:background="@color/backgroundPrimary"
+        tools:context=".view.home.branch.flt.FltFragment">
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
+            android:background="@color/white"
             android:elevation="8dp"
-            app:cardCornerRadius="8dp"
-            android:background="@color/white">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-            <com.google.android.material.textfield.TextInputLayout
+            app:cardCornerRadius="8dp">
 
-                style="@style/LoginTextInputOuterFieldStyle"
-                android:layout_margin="8dp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
-                style="@style/LoginTextInputInnerFieldStyle"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical">
 
-                android:drawablePadding="8dp"
-                android:hint="Enter Request ID"
-                android:padding="16dp"
-                android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/rounded_button"
-            android:text="Generate Request"
+                    <com.google.android.material.textfield.TextInputLayout
 
-            android:textAllCaps="false"
-             />
-        </RelativeLayout>
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/clientName"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Client Name"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/requestbyName"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Request by Name:"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/requestbyEmail"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Request Email Id"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/requestbyPno"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Request Ph.No"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ConignorName"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Conignor Name"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ConsigneeName"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Consignee Name"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/MaterialType"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Material Type"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/VehicleType"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Vehicle Type"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/NoofPkg"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="No of Pkg:"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Weight"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Weight"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Remarks"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Any Specific Remarks:"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/PreferredPickupDate"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Preferred Pickup Date"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/LoginTextInputOuterFieldStyle"
+                        android:layout_margin="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/TimeSlot"
+                            style="@style/LoginTextInputInnerFieldStyle"
+                            android:drawablePadding="8dp"
+                            android:hint="Time Slot"
+                            android:padding="16dp"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/rounded_button"
+                        android:text="Generate Request"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+            </ScrollView>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </layout>

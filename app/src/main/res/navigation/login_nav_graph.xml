@@ -101,6 +101,10 @@
         android:id="@+id/routeControllerFragment"
         android:name="com.example.nippon.view.home.routecountroler.RouteControllerFragment"
         android:label="RouteControllerFragment" >
+        <argument
+            android:name="userType"
+            app:argType="string"
+            />
         <action
             android:id="@+id/action_routeControllerFragment_to_assignVehicleFragment"
             app:destination="@id/assignVehicleFragment" >
@@ -110,6 +114,22 @@
     <fragment
         android:id="@+id/assignVehicleFragment"
         android:name="com.example.nippon.view.home.routecountroler.AssignVehicleFragment"
-        android:label="AssignVehicleFragment" />
+        android:label="AssignVehicleFragment" >
+        <argument
+            android:name="myArg"
+            app:argType="com.example.nippon.model.request.Requests"
+            />
+        <argument
+            android:name="userType"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_assignVehicleFragment_to_lrGenerationFragment"
+            app:destination="@id/lrGenerationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lrGenerationFragment"
+        android:name="com.example.nippon.view.home.routecountroler.LrGenerationFragment"
+        android:label="LrGenerationFragment" />
 
 </navigation>

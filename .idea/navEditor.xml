@@ -17,6 +17,15 @@
                             <option name="y" value="358" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_assignVehicleFragment_to_lrGenerationFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -125,6 +134,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="lrGenerationFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1579" />
+                            <option name="y" value="358" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="privacyPolicyFragment">
                     <value>
                       <LayoutPositions>
@@ -154,6 +175,15 @@
                             <option name="x" value="988" />
                             <option name="y" value="368" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_routeControllerFragment_to_assignVehicleFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

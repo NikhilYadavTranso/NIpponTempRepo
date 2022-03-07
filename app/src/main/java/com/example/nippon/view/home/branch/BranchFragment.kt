@@ -52,23 +52,7 @@ class BranchFragment : Fragment() {
             tab.text = animalsArray[position]
 
         }.attach()
-//        branchFragmentbinding.branchFragmentTabLayout.addOnTabSelectedListener(object :
-//            TabLayout.OnTabSelectedListener {
-//
-//            override fun onTabSelected(tab: TabLayout.Tab?) {
-//                val action = BranchFragmentDirections.actionBranchFragmentToFltFragment()
-//                Navigation.findNavController(branchFragmentbinding.viewPagerBranch).navigate(action)
-//                // Handle tab select
-//            }
-//
-//            override fun onTabReselected(tab: TabLayout.Tab?) {
-//                // Handle tab reselect
-//            }
-//
-//            override fun onTabUnselected(tab: TabLayout.Tab?) {
-//                // Handle tab unselect
-//            }
-//        })
+
         return branchFragmentbinding.root
     }
 

@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.nippon.view.home.branch.flt.FltFragment
+import com.example.nippon.view.home.branch.ltl.LtlFragment
 
 private const val NUM_TABS = 3
 
@@ -18,7 +19,7 @@ public class BranchViewPagerAdapter (fragmentManager: FragmentManager, lifecycle
     override fun createFragment(position: Int): Fragment {
         when (position) {
             0 -> return FltFragment()
-            1 -> return FltFragment()
+            1 -> return LtlFragment()
         }
         return FltFragment()
     }
