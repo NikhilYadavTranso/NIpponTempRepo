@@ -9,7 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorAccent">#1FC50D</color>
     <color name="green">#3BCF3B</color>
-
+    <color name="nipponLogoGreenColor">#8CC23F</color>
+    <color name="colorlightGrey">#cacaca</color>
+    <color name="nipponLogoBlueColor">#221B5B</color>
     <color name="iconGreen">#3BCF3B</color>
     <color name="backgroundPrimary">#008271</color>
 </resources>

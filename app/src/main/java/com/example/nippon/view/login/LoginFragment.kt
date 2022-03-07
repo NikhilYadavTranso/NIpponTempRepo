@@ -37,6 +37,11 @@ class LoginFragment : BaseFragment() {
             val enteredEmail = loginFragmentBinding.email.text.toString()
             val enteredPassword = loginFragmentBinding.password.text.toString()
 
+
+
+            val action = LoginFragmentDirections.actionLoginFragmentToHome()
+
+            Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
             //todo - email pattern validation check and password validation check
 
             loginFragmentBinding.email.text?.isNotEmpty().apply {
@@ -98,11 +103,7 @@ class LoginFragment : BaseFragment() {
                 parent: AdapterView<*>,
                 view: View, position: Int, id: Long
             ) {
-                Toast.makeText(
-                    loginFragmentBinding.root.context,
-                    branch[position],
-                    Toast.LENGTH_SHORT
-                ).show()
+
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
