@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -31,12 +32,16 @@ class Home : BaseFragment() {
     ): View? {
         homeFragmentbinding = HomeFragmentBinding.inflate(inflater)
 
-
+        addToList()
 
         homeFragmentbinding.homeGridLayout.layoutManager = GridLayoutManager(homeFragmentbinding.root.context,2)
         homeFragmentbinding.homeGridLayout.adapter = HomeGridAdapter(gridTextList,gridImageList)
-        addToList()
 
+
+        homeFragmentbinding.homeGridLayout.setOnClickListener(){
+
+            Toast.makeText(homeFragmentbinding.root.context, "clicked", Toast.LENGTH_SHORT).show()
+        }
         //Commenting below
 //        homeFragmentbinding.demoHOME.isVisible = isTempScreenVisible
 //        demoUserOnClicks()
