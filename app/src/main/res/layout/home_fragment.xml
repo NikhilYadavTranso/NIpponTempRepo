@@ -13,11 +13,12 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/nipponLogoBlueColor"
+        android:background="@color/colorlightGrey"
         tools:context=".view.home.Home">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+
             android:layout_height="match_parent">
 
 
@@ -30,45 +31,35 @@
                 android:layout_height="match_parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.cardview.widget.CardView
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/nipponlogo1"
+                    />
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:cardBackgroundColor="@color/nipponLogoGreenColor"
-                    app:cardCornerRadius="8dp">
+                    android:text="Welcome"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/nipponLogoGreenColor"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Venkatesh"
+                    android:gravity="center"
+                    android:textSize="22sp"
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="200dp"
-                            android:layout_gravity="center"
-
-
-                            android:background="@drawable/transolocation" />
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:text="TRACK AND TRACE"
-                            android:textAlignment="center"
-
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    />
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/homeGridLayout"
+                    android:layout_marginTop="16dp"
 
                     android:layout_gravity="center"
                     android:foregroundGravity="center"

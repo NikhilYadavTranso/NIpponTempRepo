@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -31,12 +32,16 @@ class Home : BaseFragment() {
     ): View? {
         homeFragmentbinding = HomeFragmentBinding.inflate(inflater)
 
-
+        addToList()
 
         homeFragmentbinding.homeGridLayout.layoutManager = GridLayoutManager(homeFragmentbinding.root.context,2)
         homeFragmentbinding.homeGridLayout.adapter = HomeGridAdapter(gridTextList,gridImageList)
-        addToList()
 
+
+        homeFragmentbinding.homeGridLayout.setOnClickListener(){
+
+            Toast.makeText(homeFragmentbinding.root.context, "clicked", Toast.LENGTH_SHORT).show()
+        }
         //Commenting below
 //        homeFragmentbinding.demoHOME.isVisible = isTempScreenVisible
 //        demoUserOnClicks()
@@ -45,23 +50,23 @@ class Home : BaseFragment() {
         return homeFragmentbinding.root
     }
     private fun addToList(){
-        gridTextList.add("Consignment")
-        gridTextList.add("Expenses")
-        gridTextList.add("CTS")
-        gridTextList.add("BILLING")
-        gridTextList.add("DC")
-        gridTextList.add("Reports")
-        gridTextList.add("Masters")
-        gridTextList.add("User Manual")
+        gridTextList.add("Pending Vehicle")
+        gridTextList.add("Pending Consignment")
+        gridTextList.add("Pending EWay Bill")
+        gridTextList.add("Pending Revenue")
+        gridTextList.add("THC Closing")
+        gridTextList.add("THC Payment Update")
+        gridTextList.add("LTL Closing")
+        gridTextList.add("LTL Payment Update")
 
-        gridImageList.add(R.drawable.ic_consigment)
-        gridImageList.add(R.drawable.ic_expenses)
-        gridImageList.add(R.drawable.ic_ctcfinal)
-        gridImageList.add(R.drawable.ic_bills)
-        gridImageList.add(R.drawable.ic_dc)
-        gridImageList.add(R.drawable.ic_reports)
-        gridImageList.add(R.drawable.ic_master)
-        gridImageList.add(R.drawable.ic_usermanual)
+        gridImageList.add(R.drawable.peningvehicle)
+        gridImageList.add(R.drawable.pendingconsignments)
+        gridImageList.add(R.drawable.pendingebill)
+        gridImageList.add(R.drawable.pendingebill)
+        gridImageList.add(R.drawable.thcclosing)
+        gridImageList.add(R.drawable.thcpaymentupdate)
+        gridImageList.add(R.drawable.ltlclosing)
+        gridImageList.add(R.drawable.ltlpayment)
     }
 
     private fun branchUserOnClicks() {
