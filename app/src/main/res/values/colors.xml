@@ -14,4 +14,5 @@
     <color name="nipponLogoBlueColor">#221B5B</color>
     <color name="iconGreen">#3BCF3B</color>
     <color name="backgroundPrimary">#008271</color>
+    <color name="cardBorderColor">#d3d3d3</color>
 </resources>

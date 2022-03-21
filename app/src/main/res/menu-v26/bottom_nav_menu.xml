@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bn1"
+        android:title="1"
+        android:iconTint="@color/white"
+        android:icon="@drawable/bn1"/>
+    <item
+        android:id="@+id/bn2"
+        android:title="2"
+        android:icon="@drawable/bn2"/>
+    <item
+        android:id="@+id/bn3"
+        android:title="3"
+
+        android:icon="@drawable/bn3"/>
+    <item
+        android:id="@+id/bn4"
+        android:title="4"
+        android:icon="@drawable/bn4"/>
+</menu>

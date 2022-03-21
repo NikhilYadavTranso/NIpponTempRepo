@@ -21,7 +21,7 @@ import com.example.nippon.databinding.LoginFragmentBinding
 
 class LoginFragment : BaseFragment() {
     private lateinit var loginFragmentBinding: LoginFragmentBinding
-    private val model: LoginViewModel by viewModels()
+        private val model: LoginViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

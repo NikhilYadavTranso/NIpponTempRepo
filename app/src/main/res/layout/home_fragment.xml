@@ -16,7 +16,7 @@
         android:background="@color/colorlightGrey"
         tools:context=".view.home.Home">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
 
             android:layout_height="match_parent">
@@ -26,8 +26,11 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:gravity="center_horizontal"
+                android:layout_above="@+id/bnv"
                 android:layout_height="match_parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -42,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:text="Welcome"
                     android:gravity="center"
-                    android:textSize="22sp"
+                    android:textSize="24sp"
                     android:layout_marginTop="16dp"
                     android:textStyle="bold"
                     android:textColor="@color/nipponLogoGreenColor"
@@ -52,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:text="Venkatesh"
                     android:gravity="center"
-                    android:textSize="22sp"
+                    android:textSize="24sp"
 
                     android:textStyle="normal"
                     android:textColor="@color/black"
@@ -67,7 +70,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/bnv"
+                app:itemIconSize="60dp"
+                app:labelVisibilityMode="unlabeled"
+                app:itemIconTint="@color/white"
+                android:background="@color/nipponLogoGreenColor"
+                app:menu="@menu/bottom_nav_menu"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout2" />
+        </RelativeLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/HOME"
