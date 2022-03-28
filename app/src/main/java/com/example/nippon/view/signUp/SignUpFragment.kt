@@ -1,5 +1,6 @@
 package com.example.nippon.view.signUp
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
@@ -17,6 +18,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.example.nippon.base.BaseFragment
 import com.example.nippon.databinding.SignUpFragmentBinding
+import com.example.nippon.view.MainActivity
 import com.example.nippon.view.login.LoginFragmentDirections
 
 class SignUpFragment : BaseFragment() {
@@ -60,8 +62,7 @@ class SignUpFragment : BaseFragment() {
     private fun observeViewModel() {
         model.isUserSignUp.observe(viewLifecycleOwner) { isUserLoggedIn ->
             if (isUserLoggedIn == true) {
-                val action = SignUpFragmentDirections.actionSignUpFragmentToHome()
-                Navigation.findNavController(signUpFragmentbinding.signupBtn).navigate(action)
+                goToMain()
             } else {
                 Toast.makeText(
                     activity,
@@ -71,6 +72,10 @@ class SignUpFragment : BaseFragment() {
             }
 
         }
+    }
+    private fun goToMain(){
+        val intent = Intent(requireActivity() , MainActivity::class.java)
+        startActivity(intent)
     }
 
 //TODO make a single declation

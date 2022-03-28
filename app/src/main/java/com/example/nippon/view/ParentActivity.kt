@@ -20,7 +20,6 @@ class ParentActivity : BaseActivity() {
             supportFragmentManager.findFragmentById(R.id.login_nav_host) as NavHostFragment
         val navController = navHostFragment.navController
 
-
     }
 
     companion object {

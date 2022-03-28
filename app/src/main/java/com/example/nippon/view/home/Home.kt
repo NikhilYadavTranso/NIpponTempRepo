@@ -69,27 +69,4 @@ class Home : BaseFragment() {
         gridImageList.add(R.drawable.ltlpayment)
     }
 
-    private fun branchUserOnClicks() {
-        homeFragmentbinding.homeBtn1.setOnClickListener {
-            val action = HomeDirections.actionHomeToBranchFragment()
-            Navigation.findNavController(homeFragmentbinding.homeBtn1).navigate(action)
-        }
-    }
-
-    private fun demoUserOnClicks() {
-        homeFragmentbinding.btn1.setOnClickListener {
-            val action = HomeDirections.actionHomeToBranchFragment()
-            Navigation.findNavController(homeFragmentbinding.btn1).navigate(action)
-        }
-        homeFragmentbinding.btn2.setOnClickListener {
-            val action = HomeDirections.actionHomeToRouteControllerFragment("RC")
-            Navigation.findNavController(homeFragmentbinding.btn2).navigate(action)
-        }
-        homeFragmentbinding.btn3.setOnClickListener {
-            val action = HomeDirections.actionHomeToRouteControllerFragment("V")
-            Navigation.findNavController(homeFragmentbinding.btn3).navigate(action)
-        }
-    }
-
-
 }

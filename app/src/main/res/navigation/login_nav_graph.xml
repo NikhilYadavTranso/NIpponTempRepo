@@ -23,9 +23,6 @@
             android:id="@+id/action_loginFragment_to_privacyPolicyFragment"
             app:destination="@id/privacyPolicyFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_home"
-            app:destination="@id/home" />
-        <action
             android:id="@+id/action_loginFragment_to_branchFragment"
             app:destination="@id/branchFragment" />
         <action
@@ -39,9 +36,6 @@
         android:name="com.example.nippon.view.signUp.SignUpFragment"
         android:label="sign_up_fragment"
         tools:layout="@layout/sign_up_fragment" >
-        <action
-            android:id="@+id/action_signUpFragment_to_home"
-            app:destination="@id/home" />
         <action
             android:id="@+id/action_signUpFragment_to_privacyPolicyFragment"
             app:destination="@id/privacyPolicyFragment" />

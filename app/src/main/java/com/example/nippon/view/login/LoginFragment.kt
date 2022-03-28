@@ -1,6 +1,7 @@
 package com.example.nippon.view.login
 
 import android.R
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
@@ -17,6 +18,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.example.nippon.base.BaseFragment
 import com.example.nippon.databinding.LoginFragmentBinding
+import com.example.nippon.view.MainActivity
 
 
 class LoginFragment : BaseFragment() {
@@ -39,9 +41,7 @@ class LoginFragment : BaseFragment() {
 
 
 
-            val action = LoginFragmentDirections.actionLoginFragmentToHome()
-
-            Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
+            goToMain()
             //todo - email pattern validation check and password validation check
 
             loginFragmentBinding.email.text?.isNotEmpty().apply {
@@ -118,20 +118,16 @@ class LoginFragment : BaseFragment() {
             when {
                 model.isUserType.value.equals("CH") -> {
                     Toast.makeText(activity, "Login as BRANCH user", Toast.LENGTH_SHORT).show()
-                    val action = LoginFragmentDirections.actionLoginFragmentToHome()
-
-                    Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
-                }
+                    goToMain()
+                     }
                 model.isUserType.value.equals("RC") -> {
                     Toast.makeText(activity, "Login as Route controller user", Toast.LENGTH_SHORT)
                         .show()
-                    val action = LoginFragmentDirections.actionLoginFragmentToHome()
-                    Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
+                    goToMain()
                 }
                 model.isUserType.value.equals("V") -> {
                     Toast.makeText(activity, "Login as V user", Toast.LENGTH_SHORT).show()
-                    val action = LoginFragmentDirections.actionLoginFragmentToHome()
-                    Navigation.findNavController(loginFragmentBinding.loginBtn).navigate(action)
+                    goToMain()
                 }
                 else -> {
                     Toast.makeText(
@@ -143,6 +139,10 @@ class LoginFragment : BaseFragment() {
             }
 
         }
+    }
+    private fun goToMain(){
+        val intent = Intent(requireActivity() , MainActivity::class.java)
+        startActivity(intent)
     }
 
     private fun mSetCreateAccountText() {

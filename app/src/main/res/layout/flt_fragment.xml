@@ -12,20 +12,25 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/backgroundPrimary"
+
+
+        android:background="@color/colorlightGrey"
         tools:context=".view.home.branch.flt.FltFragment">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:background="@color/white"
-            android:elevation="8dp"
+            app:cardBackgroundColor="@color/nipponLogoGreenColor"
+            android:elevation="16dp"
+
+
             app:cardCornerRadius="8dp">
 
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_margin="8dp"
+
                 android:layout_height="match_parent">
 
                 <LinearLayout
@@ -34,8 +39,19 @@
                     android:layout_margin="8dp"
                     android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputLayout
+                    <TextView
 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:text="FTL Booking"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -43,12 +59,13 @@
                             android:id="@+id/clientName"
                             style="@style/LoginTextInputInnerFieldStyle"
                             android:drawablePadding="8dp"
+                            android:textStyle="normal"
                             android:hint="Client Name"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -56,12 +73,13 @@
                             android:id="@+id/requestbyName"
                             style="@style/LoginTextInputInnerFieldStyle"
                             android:drawablePadding="8dp"
+
                             android:hint="Request by Name:"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -71,10 +89,10 @@
                             android:drawablePadding="8dp"
                             android:hint="Request Email Id"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -84,10 +102,10 @@
                             android:drawablePadding="8dp"
                             android:hint="Request Ph.No"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -97,10 +115,10 @@
                             android:drawablePadding="8dp"
                             android:hint="Conignor Name"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -110,10 +128,10 @@
                             android:drawablePadding="8dp"
                             android:hint="Consignee Name"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -123,10 +141,10 @@
                             android:drawablePadding="8dp"
                             android:hint="Material Type"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -136,11 +154,11 @@
                             android:drawablePadding="8dp"
                             android:hint="Vehicle Type"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -150,10 +168,10 @@
                             android:drawablePadding="8dp"
                             android:hint="No of Pkg:"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -163,10 +181,10 @@
                             android:drawablePadding="8dp"
                             android:hint="Weight"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -176,10 +194,10 @@
                             android:drawablePadding="8dp"
                             android:hint="Any Specific Remarks:"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -189,10 +207,10 @@
                             android:drawablePadding="8dp"
                             android:hint="Preferred Pickup Date"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
-
+                        app:boxBackgroundColor="@color/white"
                         style="@style/LoginTextInputOuterFieldStyle"
                         android:layout_margin="8dp">
 
@@ -202,7 +220,7 @@
                             android:drawablePadding="8dp"
                             android:hint="Time Slot"
                             android:padding="16dp"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
@@ -210,6 +228,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+
                         android:background="@drawable/rounded_button"
                         android:text="Generate Request"
                         android:textAllCaps="false" />
